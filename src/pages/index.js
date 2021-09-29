@@ -10,7 +10,7 @@ import {
   abs_img,
   container_separator,
 } from "../styles/home.module.scss"
-import HomeVideo from "../components/video/HomeVideo"
+// import HomeVideo from "../components/video/HomeVideo"
 
 const Home = () => {
   return (
