@@ -1,3 +1,39 @@
 .container{
     background-color: #FEFAF4;
 }
+
+.text_container{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 2rem 1rem;
+    h2{
+        font-size: 35px;
+    }
+    h5{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    p{
+        margin-top: 1rem;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 900px) {
+    .text_container{
+        width: 65%;
+        padding: 5rem;
+        padding-bottom: 3rem;
+        h2{
+            font-size: 40px;
+        }
+        h5{
+            font-size: 20px;
+        }
+        p{
+            margin-top: 2rem;
+            font-size: 20px;
+        }
+    }
+  }

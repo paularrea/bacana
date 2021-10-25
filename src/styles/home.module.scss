@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    height: calc(100vh - 10vh);
+    height: calc(200vh - 10vh);
     position: relative;
     .img_container{
         position: absolute;
@@ -15,19 +15,34 @@
     }
     .text{
         position: absolute;
-        right:5vw;
-        top: 10vw;
+        top:6vh;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        h1{
+            font-size: 100px;
+            text-align: center;
+        }
+    }
+    .abs_text{
+        position: absolute;
+        bottom:8vh;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
        line-height: 70px;
-       width: 85%;
+       width: 90%;
        z-index: 2;
        a{
-        color: black !important;
+        font-size: 25px;
+        font-family: 'Butler';
+        color: whitesmoke !important;
         &:hover{
         text-decoration: underline !important;
         }
     }
        h1{
-        color: black;
+        color: whitesmoke;
         font-size: 30px;
         font-weight: 300;
         z-index: 999;
@@ -37,6 +52,7 @@
         position: fixed;
         bottom: 1.5rem;
         right: 1.5rem;
+        z-index: 999 !important;
     }
 }
 
@@ -58,12 +74,27 @@
             z-index: 1;
         }
         .text{
+            position: absolute;
+            top:15vh;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            h1{
+                font-size: 120px;
+                text-align: center;
+            }
+        }
+        .abs_text{
+            bottom:25vh;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
            line-height: 70px;
-           width: 70%;
-           z-index: 3;
-           h1{
-            font-size: 50px;
-            font-weight: 300;
+           width: 60%;
+           z-index: 2;
+           h1,a{
+            color: whitesmoke;
+            font-size: 40px;
             z-index: 999;
            }
         }

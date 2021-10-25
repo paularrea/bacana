@@ -2,12 +2,12 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { Carousel } from "react-bootstrap"
-import { carousel_img, caption} from "./carousel.module.scss"
-import data from "./projectsData"
+import { carousel_img, caption } from "./carousel.module.scss"
+import data from "../projectsData"
 import "./carousel.css"
-import ScrollArrow from "./components/ScrollArrow/ScrollArrow"
+// import ScrollArrow from "./components/ScrollArrow/ScrollArrow"
 
-const CarouselContainer = () => {
+const CarouselContainer = ({ link }) => {
   const allImagesQuery = graphql`
     query {
       allFile(
@@ -38,7 +38,7 @@ const CarouselContainer = () => {
   } = useStaticQuery(allImagesQuery)
 
   return (
-    <section style={{ position: "relative" }}>
+    <section style={{ position: "relative", zIndex:1 }}>
       <Carousel touch wrap pause={false} controls={false}>
         {images.map(image => (
           <Carousel.Item
@@ -46,7 +46,7 @@ const CarouselContainer = () => {
             interval={3000}
             key={image.node.id}
           >
-            <Link to={image.node.base.split(".")[0]}>
+            <Link to={`${link ? link : ""}${image.node.base.split(".")[0]}`}>
               <Img
                 style={{ height: "100%", width: "100%" }}
                 imgStyle={{ objectFit: "cover" }}
@@ -74,7 +74,7 @@ const CarouselContainer = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-      <ScrollArrow />
+      {/* <ScrollArrow /> */}
     </section>
   )
 }

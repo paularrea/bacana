@@ -1,13 +1,14 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bacana-studio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Bacana studio portfolio website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Pau Larrea",
   "dependencies": {
     "bootstrap": "^5.1.0",
     "cloudinary-react": "^1.7.0",
     "gatsby": "^3.13.1",
+    "gatsby-background-image": "^1.5.3",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^1.13.0",

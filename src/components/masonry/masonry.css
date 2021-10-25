@@ -2,15 +2,16 @@
   width: 100% !important;
   height: max-content !important;
 }
-
 .react-photo-gallery--gallery > div > img {
   object-fit: contain;
   max-height: 450px;
+  padding-bottom: 20px;
 }
 
 .react-photo-gallery--gallery > div{
   height: fit-content !important;
   justify-content: center;
+  align-items: center;
 }
 
 .react-images__footer{
@@ -23,4 +24,10 @@
     width: 500px !important;
     height: fit-content !important;
   }
+  .react-photo-gallery--gallery > div > img {
+    padding: 20px;
+  }
+  .react-photo-gallery--gallery{
+    padding: 2rem;
+    }
 }

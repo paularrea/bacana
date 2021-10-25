@@ -3,7 +3,7 @@ import { Grid, Row, Col } from "react-flexbox-grid"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { container, item, caption } from "./grid.module.scss"
-import data from "../carousel/projectsData"
+import data from "../projectsData"
 
 const ProjectsGrid = () => {
   const allImagesQuery = graphql`
@@ -11,7 +11,7 @@ const ProjectsGrid = () => {
       allFile(
         filter: {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-          relativeDirectory: { eq: "carousel" }
+          relativeDirectory: { eq: "grid" }
         }
       ) {
         edges {
@@ -61,9 +61,7 @@ const ProjectsGrid = () => {
                     if (image.node.base.split(".")[0] === project.name) {
                       return (
                         <div className={caption}>
-                          <h3 style={{ fontFamily: project.font_family }}>
-                            {project.title}
-                          </h3>
+                          <h2>{project.title}</h2>
                           <p>{project.sub_title}</p>
                         </div>
                       )
