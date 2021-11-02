@@ -4,6 +4,7 @@ import Layout from "../../components/layout/layout"
 import { text_container } from "../../styles/projects.module.scss"
 import MasonryLayout from "../../components/masonry/MasonryLayout"
 import projectsData from "../../data/projectsData"
+import ScrollRevealComponent from "../../components/ScrollReveal/ScrollRevealComponent"
 
 const LisbonProject = () => {
   const allImagesQuery = graphql`
@@ -41,14 +42,18 @@ const LisbonProject = () => {
     project => project.name === "a-selina-lisboa-hotel-portugal"
   )
   return (
-    <Layout>
-      <div className={text_container}>
-        <h2>{projectInfo[0].title}</h2>
-        <h5>{projectInfo[0].sub_title}</h5>
-        <p>{projectInfo[0].text}</p>
-      </div>
-      <MasonryLayout images={images} />
-    </Layout>
+    <ScrollRevealComponent>
+      <Layout>
+          <div className={text_container}>
+            <h2>{projectInfo[0].title}</h2>
+            <h5>{projectInfo[0].sub_title}</h5>
+            <p>{projectInfo[0].text}</p>
+          </div>
+        <ScrollRevealComponent slideUp>
+          <MasonryLayout images={images} />
+        </ScrollRevealComponent>
+      </Layout>
+    </ScrollRevealComponent>
   )
 }
 

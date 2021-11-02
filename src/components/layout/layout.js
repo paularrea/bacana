@@ -8,6 +8,7 @@ import "../../styles/App.scss"
 import "../cursor/cursor.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Footer from "../footer/Footer"
+import ScrollRevealComponent from "../ScrollReveal/ScrollRevealComponent"
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false)
@@ -31,8 +32,12 @@ const Layout = ({ children }) => {
         <AnimatedCursor />
       </MediaQuery>
       <Header />
-      <main className={page}>{children}</main>
-      <Footer/>
+      <ScrollRevealComponent>
+        <main className={page}>{children}</main>
+        <ScrollRevealComponent suspense>
+          <Footer />
+        </ScrollRevealComponent>
+      </ScrollRevealComponent>
     </>
   )
 }

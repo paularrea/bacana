@@ -8,8 +8,7 @@ padding: 2rem 5vw;
         font-size: 20px;
         display: flex;
         flex-direction: column;
-        padding-bottom: 1rem;
-        p{margin-bottom: 0;}
+        h2{margin-bottom: 0;}
         a{
             color: black !important;
             &:hover{
@@ -52,7 +51,7 @@ padding: 2rem 5vw;
                 }
             }
             .abs_img{
-                position: absolute;
+                position: fixed;
                 bottom: 5rem;
                 right: 5vw;
             }

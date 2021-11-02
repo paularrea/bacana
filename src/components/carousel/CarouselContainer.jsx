@@ -37,7 +37,7 @@ const CarouselContainer = ({ link }) => {
   } = useStaticQuery(allImagesQuery)
 
   return (
-    <section style={{ position: "relative", zIndex:1 }}>
+    <section style={{ position: "relative", zIndex: 1 }}>
       <Carousel touch wrap pause={false} controls={false}>
         {images.map(image => (
           <Carousel.Item
@@ -58,9 +58,7 @@ const CarouselContainer = ({ link }) => {
                   return (
                     <Carousel.Caption>
                       <div className={caption}>
-                        <h1 style={{ fontFamily: project.font_family }}>
-                          {project.title}
-                        </h1>
+                        <h1>{project.title}</h1>
                         <p>{project.sub_title}</p>
                       </div>
                     </Carousel.Caption>

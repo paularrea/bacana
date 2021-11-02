@@ -21,21 +21,16 @@
         .item{
             width: 400px;
             height: 400px;
-            :hover{
-                img{
-                    display: none;
-                }
-                .caption{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                }
+            img{
+                visibility: visible;
+                opacity: 1;
+                transition: .3s ease-out;
             }
             .caption{
-                display: none;
+                visibility: hidden;
+                opacity: 0;
                 position: absolute;
+                transition: .3s ease-out;
                 color: black;
                 font-weight: 700;
                 left: 0; 
@@ -44,6 +39,22 @@
                 margin-left: auto; 
                 margin-right: auto; 
                 width: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            :hover{
+                img{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .caption{
+                    opacity: 1;
+                    transform: translateY(-10px);
+                    visibility: visible;
+                }
             }
         }
     }

@@ -6,6 +6,7 @@ import CarouselContainer from "../../components/carousel/CarouselContainer"
 import ProjectsGrid from "../../components/grid/ProjectsGrid"
 import ProjectsHeader from "../../components/header/ProjectsHeader"
 import AnimatedCursor from "../../components/cursor/AnimatedCursor"
+import ScrollRevealComponent from "../../components/ScrollReveal/ScrollRevealComponent"
 import Footer from "../../components/footer/Footer"
 
 const Projects = () => {
@@ -25,13 +26,13 @@ const Projects = () => {
       </MediaQuery>
       <ProjectsHeader />
       {show && (
-        <>
+        <ScrollRevealComponent>
           <Seo title="Projects" />
           <CarouselContainer />
           <ProjectsGrid />
-        </>
+          <Footer />
+        </ScrollRevealComponent>
       )}
-      <Footer/>
     </div>
   )
 }
