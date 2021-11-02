@@ -58,8 +58,12 @@ const CarouselContainer = ({ link }) => {
                   return (
                     <Carousel.Caption>
                       <div className={caption}>
-                        <h1>{project.title}</h1>
-                        <p>{project.sub_title}</p>
+                        <h1 style={{ color: project.text_color }}>
+                          {project.title}
+                        </h1>
+                        <p style={{ color: project.text_color }}>
+                          {project.sub_title}
+                        </p>
                       </div>
                     </Carousel.Caption>
                   )

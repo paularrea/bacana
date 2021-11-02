@@ -5,7 +5,7 @@ import LogoBlack from "../components/GatsbyImages/LogoBlack"
 import { Link } from "gatsby"
 import { container, abs_img } from "../styles/home.module.scss"
 import CarouselContainer from "../components/carousel/CarouselContainer"
-import ClientsBanner from "../components/clients/ClientsBanner"
+// import ClientsBanner from "../components/clients/ClientsBanner"
 import HomeIntroText from "../components/home/HomeIntroText"
 import ProjectsGrid from "../components/grid/ProjectsGrid"
 
@@ -17,7 +17,7 @@ const Home = () => {
         <CarouselContainer link="projects/" />
         <HomeIntroText/>
         <ProjectsGrid link="projects/" />
-        <ClientsBanner />
+        {/* <ClientsBanner /> */}
         <Link style={{ zIndex: 9999 }} className={abs_img} to="/services">
           <LogoBlack />
         </Link>

@@ -8,6 +8,14 @@
             color: black;
             h2{
                 margin: 0;
+                line-height: 15px;
+            }
+            h2,p{
+                text-decoration: underline;
+                text-decoration-color: #E9E6E3;
+            }
+            p{
+                font-weight: 700;
             }
         }
         div{
@@ -27,6 +35,9 @@
                 transition: .3s ease-out;
             }
             .caption{
+                h2{
+                    line-height: 30px;
+                }
                 visibility: hidden;
                 opacity: 0;
                 position: absolute;

@@ -11,12 +11,10 @@ const LogoBlack = () => {
         animationDuration: "5000ms",
         animationIterationCount: "infinite",
         animationTimingFunction: "linear",
-        width: "15vw",
-        height: "15vw",
-        maxWidth:200,
-        maxHeight:200,
-        minWidth: "100px",
-        minHeight: "100px",
+        width: "25vw",
+        height: "25vw",
+        maxWidth:"150px",
+        maxHeight:"150px",
       }}
       alt="Bacana white logo"
       placeholder="blurred"

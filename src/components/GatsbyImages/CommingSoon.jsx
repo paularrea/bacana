@@ -10,7 +10,7 @@ const CommingSoon = () => {
       style={{
         WebkitAnimation: "flash linear 1s infinite",
         animation: "flash linear 1s infinite",
-        width:'30vw', height:'5vw', minWidth:'300px', minHeight:'30px'
+        width:'12vw', height:'2vw', minWidth:'300px', minHeight:'30px'
       }}
       placeholder="blurred"
       layout="fixed"

@@ -9,7 +9,7 @@
   object-fit: contain;
   max-height: 350px;
   margin: 0 !important;
-  padding: 0 !important;
+  /* padding: 0 !important; */
   padding-bottom: 1rem !important;
 }
 
