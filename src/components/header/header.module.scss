@@ -4,13 +4,12 @@
     padding: 0;
     width: 100%;
     position: fixed;
-    height: 10vh;
+    height: 60px;
     background-color: black;
-    min-height: 50px;
     .abs_title{
         position: fixed;
         left: 5vw;
-        top: 3.5vh;
+        top: 16px;
         z-index: 9999;
     }
     a{
@@ -23,11 +22,10 @@
         text-decoration: underline !important;
     }
     nav{
-        width: 30vw;
-        max-width: 300px;
+        width: 350px;
         display: flex;
         justify-content: space-between;
-    }
+   }
 }
 
 .navbar_projects{
@@ -35,7 +33,7 @@
     padding: 0;
     width: 100%;
     position: fixed;
-    height: 10vh;
+    height: 60px;
     background-color: transparent;
     .abs_title{
         position: fixed;
@@ -53,10 +51,14 @@
         text-decoration: underline !important;
     }
     nav{
-        width: 30vw;
-        max-width: 300px;
+        width: 350px;
         display: flex;
         justify-content: space-between;
+   }
+}
+.burger_nav{
+    a{
+        font-family: 'butler';
     }
 }
 
@@ -74,11 +76,6 @@
     } 
     .active{
         text-decoration: underline;
-    }
-    nav{
-        width: 25vw;
-        display: flex;
-        justify-content: space-between;
     }
 }
 }

@@ -1,25 +1,6 @@
 .container{
-    height: calc(100vh - 10vh);
+    height: calc(100vh - 140px);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    .box{
-        margin-bottom: 4rem;
-        .flex_container{
-            padding-top: 2rem;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            
-        }
-    }
-}
-
-@media (min-width: 900px) {
-  .container{
-
-      flex-direction: row;
-      text-align: center;
-  }
 }

@@ -3,9 +3,8 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { Carousel } from "react-bootstrap"
 import { carousel_img, caption } from "./carousel.module.scss"
-import data from "../projectsData"
+import data from "../../data/projectsData"
 import "./carousel.css"
-// import ScrollArrow from "./components/ScrollArrow/ScrollArrow"
 
 const CarouselContainer = ({ link }) => {
   const allImagesQuery = graphql`
@@ -59,10 +58,10 @@ const CarouselContainer = ({ link }) => {
                   return (
                     <Carousel.Caption>
                       <div className={caption}>
-                        <p>{project.sub_title}</p>
                         <h1 style={{ fontFamily: project.font_family }}>
                           {project.title}
                         </h1>
+                        <p>{project.sub_title}</p>
                       </div>
                     </Carousel.Caption>
                   )

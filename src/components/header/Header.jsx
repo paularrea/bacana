@@ -14,6 +14,9 @@ const Header = () => {
           <Link activeClassName={active} to="/projects">
             Projects
           </Link>
+          <Link activeClassName={active} to="/services">
+            Services
+          </Link>
           <Link activeClassName={active} to="/shop">
             Shop
           </Link>

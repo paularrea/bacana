@@ -7,6 +7,7 @@ import MediaQuery from "react-responsive"
 import "../../styles/App.scss"
 import "../cursor/cursor.css"
 import "bootstrap/dist/css/bootstrap.min.css"
+import Footer from "../footer/Footer"
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false)
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
       </MediaQuery>
       <Header />
       <main className={page}>{children}</main>
+      <Footer/>
     </>
   )
 }

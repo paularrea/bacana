@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout/layout"
-import projectsData from "../../components/projectsData"
+import projectsData from "../../data/projectsData"
 import { text_container } from "../../styles/projects.module.scss"
 import MasonryLayout from "../../components/masonry/MasonryLayout"
 

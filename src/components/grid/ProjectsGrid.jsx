@@ -3,7 +3,7 @@ import { Grid, Row, Col } from "react-flexbox-grid"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { container, item, caption } from "./grid.module.scss"
-import data from "../projectsData"
+import data from "../../data/projectsData"
 
 const ProjectsGrid = () => {
   const allImagesQuery = graphql`
@@ -42,6 +42,7 @@ const ProjectsGrid = () => {
           {images.map(image => (
             <Col
               style={{
+                marginBottom:'1rem',
                 display: "flex",
                 jusifyContent: "center",
                 alignItems: "flex-start",

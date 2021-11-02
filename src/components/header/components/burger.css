@@ -28,10 +28,10 @@
 
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
+  width: 30px;
+  height: 25px;
   right: 5vw;
-  top: 3vh;
+  top: 17px;
 }
 
 /* Color/shape of burger icon bars */

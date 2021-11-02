@@ -6,6 +6,7 @@ import CarouselContainer from "../../components/carousel/CarouselContainer"
 import ProjectsGrid from "../../components/grid/ProjectsGrid"
 import ProjectsHeader from "../../components/header/ProjectsHeader"
 import AnimatedCursor from "../../components/cursor/AnimatedCursor"
+import Footer from "../../components/footer/Footer"
 
 const Projects = () => {
   const [show, setShow] = useState(false)
@@ -30,6 +31,7 @@ const Projects = () => {
           <ProjectsGrid />
         </>
       )}
+      <Footer/>
     </div>
   )
 }

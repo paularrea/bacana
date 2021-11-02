@@ -39,7 +39,7 @@ const Contact = () => (
         <div className={box}>
           <p style={{ fontWeight: 700 }}>Call us</p>
           <p>
-            <a rel="noreferrer" target="_blank" href="tel:+351912677606">
+            <a href="tel:+351912677606">
               +351 912 677 606
             </a>
           </p>

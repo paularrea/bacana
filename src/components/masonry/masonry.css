@@ -5,7 +5,9 @@
 .react-photo-gallery--gallery > div > img {
   object-fit: contain;
   max-height: 450px;
-  padding-bottom: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 2rem !important;
 }
 
 .react-photo-gallery--gallery > div{
