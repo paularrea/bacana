@@ -1,9 +1,52 @@
 .container{
     padding: 2rem 5vw;
+    background-color: #E9E6E3;
+    height: auto;
+    position: relative;
+    .service_item{
+        padding-bottom: 1rem;
+        h2{
+            font-size: 50px;
+            line-height: 50px;
+            width: fit-content;
+            max-width: 60vw;
+        }
+        p{
+            font-size: 18px;
+            top: 5rem;
+            right: 5rem;
+            width: 100%;
+        }
+    }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1025px) {
     .container{
-        padding: 5rem 5vw;
+        padding: 3rem 5vw;
+        background-color: #E9E6E3;
+        position: relative;
+        .service_item{
+            padding-bottom: 0;
+            h2{
+                font-size: 70px;
+                line-height: 70px;
+                width: fit-content;
+                &:hover{
+                    text-decoration: underline;   
+                    text-decoration-color: white;
+                }
+                &:hover + p{
+                    display: block;
+                }
+            }
+            p{
+                font-size: 30px;
+                display:none;
+                position: absolute;
+                top: 5rem;
+                right: 5rem;
+                width: 30vw;
+            }
+        }
     }
 }

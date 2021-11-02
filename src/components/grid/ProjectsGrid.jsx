@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import { container, item, caption } from "./grid.module.scss"
 import data from "../../data/projectsData"
 
-const ProjectsGrid = () => {
+const ProjectsGrid = ({link}) => {
   const allImagesQuery = graphql`
     query {
       allFile(
@@ -52,7 +52,7 @@ const ProjectsGrid = () => {
               xs={12}
             >
               <div className={item}>
-                <Link to={image.node.base.split(".")[0]}>
+              <Link to={`${link ? link : ""}${image.node.base.split(".")[0]}`}>
                   <Img
                     style={{ height: "100%", width: "100%" }}
                     imgStyle={{ objectFit: "cover" }}

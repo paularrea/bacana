@@ -14,7 +14,7 @@ const Home = () => {
       <Seo title="Home" />
       <CarouselContainer link="projects/" />
       <HomeIntroText />
-      <ProjectsGrid />
+      <ProjectsGrid link="projects/"/>
       <ClientsBanner />
     </Layout>
   )

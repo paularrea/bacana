@@ -10,7 +10,7 @@
     outline: none !important;
   }
 html, body{
-  background-color: #FEFAF4;
+  background-color: #E9E6E3;
   margin: 0;
 }
 
@@ -22,7 +22,9 @@ h1,h2,h3,h4,h5,h6,p{
 h1, h2{
   font-family: 'butler';
 }
-
+p{
+  font-weight: 100;
+}
 a{
 color: white !important;
     &:visited{
@@ -49,4 +51,10 @@ button{
 
 input[type=text], input[type=button], input[type=submit], select, button {
     -webkit-appearance: none;
+}
+
+@media (min-width: 900px) {
+  p{
+    font-weight: 400;
+  }
 }
