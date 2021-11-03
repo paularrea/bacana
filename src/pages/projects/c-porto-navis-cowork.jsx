@@ -4,6 +4,7 @@ import Layout from "../../components/layout/layout"
 import MasonryLayout from "../../components/masonry/MasonryLayout"
 import projectsData from "../../data/projectsData"
 import { text_container } from "../../styles/projects.module.scss"
+import ScrollRevealComponent from "../../components/ScrollReveal/ScrollRevealComponent"
 
 const PortoProject = () => {
   const allImagesQuery = graphql`
@@ -43,12 +44,14 @@ const PortoProject = () => {
   )
   return (
     <Layout>
+         <ScrollRevealComponent slideUp={true}>
       <div className={text_container}>
         <h2>{projectInfo[0].title}</h2>
         <h5>{projectInfo[0].sub_title}</h5>
         <p>{projectInfo[0].text}</p>
       </div>
       <MasonryLayout images={images} />
+      </ScrollRevealComponent>
     </Layout>
   )
 }

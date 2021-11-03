@@ -17,9 +17,6 @@
         font-size: 20px;
         line-height: auto;
     }
-    .home_intro_link{
-        text-decoration: underline;
-    }
 }
 
 @media (min-width: 870px) {
@@ -42,6 +39,9 @@
             min-width: 900px;
             font-size: 35px;
             line-height: 40px;
+        }
+        .home_intro_link{
+            text-decoration: underline;
         }
     }
 }

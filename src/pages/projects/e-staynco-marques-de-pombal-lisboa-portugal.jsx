@@ -4,6 +4,7 @@ import Layout from "../../components/layout/layout"
 import MasonryLayout from "../../components/masonry/MasonryLayout"
 import projectsData from "../../data/projectsData"
 import { text_container } from "../../styles/projects.module.scss"
+import ScrollRevealComponent from "../../components/ScrollReveal/ScrollRevealComponent"
 
 const MarquesDePombal = () => {
   const allImagesQuery = graphql`
@@ -37,18 +38,19 @@ const MarquesDePombal = () => {
     allFile: { edges: images },
   } = useStaticQuery(allImagesQuery)
 
-
   const projectInfo = projectsData.filter(
     project => project.name === "e-staynco-marques-de-pombal-lisboa-portugal"
   )
   return (
     <Layout>
-      <div className={text_container}>
-        <h2>{projectInfo[0].title}</h2>
-        <h5>{projectInfo[0].sub_title}</h5>
-        <p>{projectInfo[0].text}</p>
-      </div>
-      <MasonryLayout images={images} />
+      <ScrollRevealComponent slideUp={true}>
+        <div className={text_container}>
+          <h2>{projectInfo[0].title}</h2>
+          <h5>{projectInfo[0].sub_title}</h5>
+          <p>{projectInfo[0].text}</p>
+        </div>
+        <MasonryLayout images={images} />
+      </ScrollRevealComponent>
     </Layout>
   )
 }

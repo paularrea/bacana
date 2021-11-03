@@ -42,18 +42,16 @@ const LisbonProject = () => {
     project => project.name === "a-selina-lisboa-hotel-portugal"
   )
   return (
-    <ScrollRevealComponent>
-      <Layout>
-          <div className={text_container}>
-            <h2>{projectInfo[0].title}</h2>
-            <h5>{projectInfo[0].sub_title}</h5>
-            <p>{projectInfo[0].text}</p>
-          </div>
-        <ScrollRevealComponent slideUp>
-          <MasonryLayout images={images} />
-        </ScrollRevealComponent>
-      </Layout>
+    <Layout>
+        <ScrollRevealComponent slideUp={true}>
+        <div className={text_container}>
+          <h2>{projectInfo[0].title}</h2>
+          <h5>{projectInfo[0].sub_title}</h5>
+          <p>{projectInfo[0].text}</p>
+        </div>
+        <MasonryLayout images={images} />
     </ScrollRevealComponent>
+      </Layout>
   )
 }
 
