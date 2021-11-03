@@ -4,8 +4,14 @@ import "./cursor.css"
 
 const AnimatedCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [containerPosition, setContainerPosition] = useState({ x: 0, y: 0 })
+
   const [clicked, setClicked] = useState(false)
   const [linkHovered, setLinkHovered] = useState(false)
+  const [homelinkHoveredClients, setHomeLinkHoveredClients] = useState(false)
+  const [homelinkHoveredCommunities, setHomeLinkHoveredCommunities] =
+    useState(false)
+
   const [hidden, setHidden] = useState(false)
 
   const addEventListeners = useCallback(() => {
@@ -28,11 +34,14 @@ const AnimatedCursor = () => {
     addEventListeners()
     handleLinkHoverEvents()
     imgHandleLinkHoverEvents()
+    containerHoverLinkClients()
+    containerHoverLinkCommunities()
     return () => removeEventListeners()
   }, [addEventListeners, removeEventListeners])
 
   const onMouseMove = e => {
     setPosition({ x: e.clientX, y: e.clientY })
+    setContainerPosition({ x: e.clientX + 50, y: e.clientY + 250 })
   }
 
   const onMouseDown = () => {
@@ -65,10 +74,33 @@ const AnimatedCursor = () => {
     })
   }
 
+  const containerHoverLinkClients = () => {
+    document.getElementsByName("hoverContainerClients").forEach(el => {
+      el.addEventListener("mouseover", () => setHomeLinkHoveredClients(true))
+      el.addEventListener("mouseout", () => setHomeLinkHoveredClients(false))
+    })
+  }
+  const containerHoverLinkCommunities = () => {
+    document.getElementsByName("hoverContainerCommunities").forEach(el => {
+      el.addEventListener("mouseover", () =>
+        setHomeLinkHoveredCommunities(true)
+      )
+      el.addEventListener("mouseout", () =>
+        setHomeLinkHoveredCommunities(false)
+      )
+    })
+  }
+
   const cursorClasses = classNames("cursor", {
     "cursor--clicked": clicked,
     "cursor--hidden": hidden,
     "cursor--link-hovered": linkHovered,
+  })
+
+  const floatingContainerClasses = classNames("floating_container", {
+    "floating_container--clicked": clicked,
+    "floating_container--hidden": hidden,
+    "floating_container--link-hovered": linkHovered,
   })
 
   return (
@@ -77,6 +109,32 @@ const AnimatedCursor = () => {
         className={cursorClasses}
         style={{ left: `${position.x}px`, top: `${position.y}px` }}
       />
+      {homelinkHoveredClients && (
+        <div
+          className={floatingContainerClasses}
+          style={{
+            left: `${containerPosition.x}px`,
+            top: `${containerPosition.y}px`,
+          }}
+        >
+          Through an insightful and strategic approach, we ensure our client’s
+          vision and ambitions are being met.
+        </div>
+      )}
+      {homelinkHoveredCommunities && (
+        <div
+          className={floatingContainerClasses}
+          style={{
+            left: `${containerPosition.x}px`,
+            top: `${containerPosition.y}px`,
+          }}
+        >
+          Captivated by unique stories and unfettered by international borders,
+          our experience spans all corners of the world - always favoring
+          working with local designers, artists, suppliers and crafters from the
+          country in which the project is being based.
+        </div>
+      )}
     </div>
   )
 }

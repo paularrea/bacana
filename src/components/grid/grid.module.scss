@@ -1,5 +1,5 @@
 .container{
-    margin: 5vw 0;
+    margin: 3vw;
     .item{
         position: relative;
         width: 100%;
@@ -7,14 +7,16 @@
         .caption{           
             color: black;
             h2{
+                font-size: 25px;
                 margin: 0;
-                line-height: 15px;
+                line-height: 20px;
             }
             h2,p{
                 text-decoration: underline;
                 text-decoration-color: #E9E6E3;
             }
             p{
+                font-size: 16px;
                 font-weight: 700;
             }
         }
@@ -36,7 +38,11 @@
             }
             .caption{
                 h2{
+                    font-size: 30px;
                     line-height: 30px;
+                }
+                p{
+                    font-size: 18px;
                 }
                 visibility: hidden;
                 opacity: 0;

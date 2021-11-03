@@ -42,7 +42,7 @@ const CarouselContainer = ({ link }) => {
         {images.map(image => (
           <Carousel.Item
             className={carousel_img}
-            interval={3000}
+            interval={5000}
             key={image.node.id}
           >
             <Link to={`${link ? link : ""}${image.node.base.split(".")[0]}`}>

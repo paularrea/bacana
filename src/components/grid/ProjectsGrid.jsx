@@ -47,7 +47,8 @@ const ProjectsGrid = ({link}) => {
                 jusifyContent: "center",
                 alignItems: "flex-start",
               }}
-              md={4}
+              xl={4}
+              md={6}
               sm={12}
               xs={12}
             >

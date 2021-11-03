@@ -1,4 +1,4 @@
-.carousel-item-next{
+/* .carousel-item-next{
     transition: transform 0s ease-in-out;
   }
   .carousel-item-prev{
@@ -9,7 +9,7 @@
   }
   .carousel-item-right {
       transform: translateX(100%);
-  }
+  } */
 
   .carousel-caption{
     top: 55%;
