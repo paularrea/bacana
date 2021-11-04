@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Bacana Studio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    description: `We are an interior design and architecture company focusing on hospitality, workplaces and residential projects around the world. Listening to our clients and understanding their needs, the environment and the communities behind every project is what drives our creativity while strategically developing individual concepts around business models.`,
+    author: `Pau Larrea`,
+    siteUrl: `www.bacanastudio.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

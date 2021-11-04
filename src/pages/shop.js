@@ -6,7 +6,7 @@ import {container} from "../styles/shop.module.scss"
 
 const Shop = () => (
   <Layout>
-    <Seo title="Shop" />
+    <Seo title="Shop" description='Comming Soon' />
     <div className={container}>
         <CommingSoon />
     </div>
