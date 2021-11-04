@@ -34,9 +34,7 @@ const Layout = ({ children }) => {
       <Header />
       <ScrollRevealComponent>
         <main className={page}>{children}</main>
-        <ScrollRevealComponent suspense>
           <Footer />
-        </ScrollRevealComponent>
       </ScrollRevealComponent>
     </>
   )

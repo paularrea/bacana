@@ -12,10 +12,18 @@
   } */
 
   .carousel-caption{
-    top: 55%;
+    top: 60%;
+    right: 0;
+    left: 0;
     transform: translateY(-50%);
   }
 
   .carousel-indicators [data-bs-target] {
       padding: .2rem !important;
+  }
+
+  @media (min-width: 870px) {
+    .carousel-caption{
+        top: 55%;
+      }
   }

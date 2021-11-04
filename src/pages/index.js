@@ -12,10 +12,13 @@ import ProjectsGrid from "../components/grid/ProjectsGrid"
 const Home = () => {
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo
+        title="Home"
+        description="We are an interior design and architecture company focusing on hospitality, workplaces and residential projects around the world. Listening to our clients and understanding their needs, the environment and the communities behind every project is what drives our creativity while strategically developing individual concepts around business models."
+      />
       <div className={container}>
         <CarouselContainer link="projects/" />
-        <HomeIntroText/>
+        <HomeIntroText />
         <ProjectsGrid link="projects/" />
         {/* <ClientsBanner /> */}
         <Link style={{ zIndex: 9999 }} className={abs_img} to="/services">

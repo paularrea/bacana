@@ -43,15 +43,15 @@ const LisbonProject = () => {
   )
   return (
     <Layout>
-        <ScrollRevealComponent slideUp={true}>
+      <ScrollRevealComponent slideUp={true}>
         <div className={text_container}>
           <h2>{projectInfo[0].title}</h2>
           <h5>{projectInfo[0].sub_title}</h5>
           <p>{projectInfo[0].text}</p>
         </div>
         <MasonryLayout images={images} />
-    </ScrollRevealComponent>
-      </Layout>
+      </ScrollRevealComponent>
+    </Layout>
   )
 }
 
