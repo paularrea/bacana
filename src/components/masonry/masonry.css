@@ -7,7 +7,8 @@
 }
 .react-photo-gallery--gallery > div > img {
   object-fit: contain;
-  max-height: 350px;
+  max-height: 350px !important;
+  height: fit-content !important;
   margin: 0 !important;
   /* padding: 0 !important; */
   padding-bottom: 1rem !important;
@@ -30,7 +31,7 @@
     height: fit-content !important;
   }
   .react-photo-gallery--gallery > div > img {
-    padding: 20px;
+    padding: 1rem;
     max-height: 450px;
   }
   .react-photo-gallery--gallery{
