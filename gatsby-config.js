@@ -19,6 +19,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-scroll-reveal`,
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+        duration: 500,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

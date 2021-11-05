@@ -19,7 +19,7 @@ const CarouselContainer = ({ link }) => {
           node {
             base
             childImageSharp {
-              fluid {
+              fluid(quality:90) {
                 base64
                 aspectRatio
                 src

@@ -1,11 +1,12 @@
 import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import MediaQuery from "react-responsive"
 import Img from "gatsby-image"
 import { container, item, caption } from "./grid.module.scss"
 import data from "../../data/projectsData"
 
-const ProjectsGrid = ({link}) => {
+const ProjectsGrid = ({ link }) => {
   const allImagesQuery = graphql`
     query {
       allFile(
@@ -36,13 +37,13 @@ const ProjectsGrid = ({link}) => {
   } = useStaticQuery(allImagesQuery)
 
   return (
-    <div className={container}>
+    <div id="projects" className={container}>
       <Grid>
         <Row>
           {images.map(image => (
             <Col
               style={{
-                marginBottom:'1rem',
+                marginBottom: "1rem",
                 display: "flex",
                 jusifyContent: "center",
                 alignItems: "flex-start",
@@ -53,7 +54,9 @@ const ProjectsGrid = ({link}) => {
               xs={12}
             >
               <div className={item}>
-              <Link to={`${link ? link : ""}${image.node.base.split(".")[0]}`}>
+                <Link
+                  to={`${link ? link : ""}${image.node.base.split(".")[0]}`}
+                >
                   <Img
                     style={{ height: "100%", width: "100%" }}
                     imgStyle={{ objectFit: "cover" }}
@@ -62,10 +65,19 @@ const ProjectsGrid = ({link}) => {
                   {data.map(project => {
                     if (image.node.base.split(".")[0] === project.name) {
                       return (
-                        <div className={caption}>
-                          <h2>{project.title}</h2>
-                          <p>{project.sub_title}</p>
-                        </div>
+                        <>
+                          <MediaQuery maxWidth={900}>
+                            <div className={caption}>
+                              <h2>{project.title}</h2>
+                              <p>{project.sub_title}</p>
+                            </div>
+                          </MediaQuery>
+                          <MediaQuery minWidth={900}>
+                            <div className={caption}>
+                              <h2>{project.title}</h2>
+                            </div>
+                          </MediaQuery>
+                        </>
                       )
                     } else {
                       return null

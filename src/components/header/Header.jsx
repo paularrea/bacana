@@ -1,9 +1,10 @@
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import React from "react"
 import Burger from "./components/burger"
 import MediaQuery from "react-responsive"
 import { navbar, active, abs_title } from "./header.module.scss"
 import "./components/burger.css"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Header = () => {
   return (
@@ -11,6 +12,9 @@ const Header = () => {
       <MediaQuery minWidth={870}>
         <Link to="/">BACANA STUDIO</Link>
         <nav>
+          {/* <AnchorLink activeClassName={active} stripHash to="/#projects">
+            Projects
+          </AnchorLink> */}
           <Link activeClassName={active} to="/projects">
             Projects
           </Link>
@@ -26,7 +30,9 @@ const Header = () => {
         </nav>
       </MediaQuery>
       <MediaQuery maxWidth={870}>
-        <Link className={abs_title} to="/">BACANA STUDIO</Link>
+        <Link className={abs_title} to="/">
+          BACANA STUDIO
+        </Link>
         <Burger />
       </MediaQuery>
     </div>

@@ -13,9 +13,9 @@ import ScrollRevealComponent from "../ScrollReveal/ScrollRevealComponent"
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false)
 
-  if (typeof window !== "undefined") {
-    require("smooth-scroll")('a[href*="#"]')
-  }
+  // if (typeof window !== "undefined") {
+  //   require("smooth-scroll")('a[href*="#"]')
+  // }
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -23,6 +23,11 @@ const Layout = ({ children }) => {
     }, 300)
     return () => clearTimeout(timeout)
   }, [show])
+
+  const inContactPage = () => {
+    const url = window.location.href
+    return url.indexOf("contact") > -1
+  }
 
   if (!show) return null
 
@@ -34,7 +39,7 @@ const Layout = ({ children }) => {
       <Header />
       <ScrollRevealComponent>
         <main className={page}>{children}</main>
-          <Footer />
+        {inContactPage() ? "" : <Footer />}
       </ScrollRevealComponent>
     </>
   )
