@@ -1,10 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Carousel } from "react-bootstrap"
 import { carousel_img, caption } from "./carousel.module.scss"
 import data from "../../data/projectsData"
 import "./carousel.css"
+import img from "../../images/carousel/c-porto-navis-cowork.jpg"
 
 const CarouselContainer = ({ link }) => {
   const allImagesQuery = graphql`
@@ -19,13 +20,14 @@ const CarouselContainer = ({ link }) => {
           node {
             base
             childImageSharp {
-              fluid(quality:90) {
-                base64
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
+              gatsbyImageData(
+                quality: 100
+                transformOptions: { cropFocus: CENTER, fit: COVER }
+                webpOptions: { quality: 100 }
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                blurredOptions: { width: 100 }
+              )
             }
           }
         }
@@ -46,13 +48,11 @@ const CarouselContainer = ({ link }) => {
             key={image.node.id}
           >
             <Link to={`${link ? link : ""}${image.node.base.split(".")[0]}`}>
-              <Img
-                style={{ height: "100%", width: "100%" }}
-                imgStyle={{ objectFit: "cover" }}
-                fluid={image.node.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(image.node.childImageSharp)}
+                style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
                 alt={image.node.base}
               />
-
               {data.map(project => {
                 if (image.node.base.split(".")[0] === project.name) {
                   return (
@@ -75,7 +75,6 @@ const CarouselContainer = ({ link }) => {
           </Carousel.Item>
         ))}
       </Carousel>
-      {/* <ScrollArrow /> */}
     </section>
   )
 }

@@ -8,7 +8,6 @@ import CarouselContainer from "../components/carousel/CarouselContainer"
 // import ClientsBanner from "../components/clients/ClientsBanner"
 import HomeIntroText from "../components/home/HomeIntroText"
 import ProjectsGrid from "../components/grid/ProjectsGrid"
-
 const Home = () => {
   return (
     <Layout>
