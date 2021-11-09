@@ -1,7 +1,6 @@
 import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import MediaQuery from "react-responsive"
 import Img from "gatsby-image"
 import { container, item, caption } from "./grid.module.scss"
 import data from "../../data/projectsData"
@@ -66,17 +65,9 @@ const ProjectsGrid = ({ link }) => {
                     if (image.node.base.split(".")[0] === project.name) {
                       return (
                         <>
-                          <MediaQuery maxWidth={900}>
-                            <div className={caption}>
-                              <h2>{project.title}</h2>
-                              <p>{project.sub_title}</p>
-                            </div>
-                          </MediaQuery>
-                          <MediaQuery minWidth={900}>
-                            <div className={caption}>
-                              <h2>{project.title}</h2>
-                            </div>
-                          </MediaQuery>
+                          <div className={caption}>
+                            <h2>{project.title}</h2>
+                          </div>
                         </>
                       )
                     } else {
