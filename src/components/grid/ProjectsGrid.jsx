@@ -13,6 +13,7 @@ const ProjectsGrid = ({ link }) => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "grid" }
         }
+        sort: { fields: name }
       ) {
         edges {
           node {

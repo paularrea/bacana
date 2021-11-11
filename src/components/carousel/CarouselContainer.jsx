@@ -14,6 +14,7 @@ const CarouselContainer = ({ link }) => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "carousel" }
         }
+        sort: { fields: name }
       ) {
         edges {
           node {
