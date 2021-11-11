@@ -5,7 +5,6 @@ import { Carousel } from "react-bootstrap"
 import { carousel_img, caption } from "./carousel.module.scss"
 import data from "../../data/projectsData"
 import "./carousel.css"
-import img from "../../images/carousel/c-porto-navis-cowork.jpg"
 
 const CarouselContainer = ({ link }) => {
   const allImagesQuery = graphql`
